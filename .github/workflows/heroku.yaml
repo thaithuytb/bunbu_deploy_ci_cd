@@ -1,0 +1,37 @@
+name: Deploy nodejs app to heroku
+
+on:
+    push:
+        branches: ['master']
+    pull_request:
+        branches: ['master']
+jobs:
+    # build:
+    #   runs-on: ubuntu-latest
+
+    #   strategy:
+    #     matrix:
+    #       node-version: [16.x]
+
+    #   steps:
+    #     - uses: actions/checkout@master
+    #     - name: Use Node.js ${{ matrix.node-version }}
+    #       uses: actions/setup-node@v2
+    #       with:
+    #         node-version: ${{ matrix.node-version }}
+
+    #     - name: Run a multi-line script
+    #       run: |
+    #         yarn install
+    #         yarn run build
+    #         yarn run test
+
+    #     - uses: thaithuytb/bunbu_deploy_ci_cd@master
+    #       with:
+    #         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+    #         heroku_app_name: github-action-auto-deploy
+    #         heroku_email: ngoquangthai29112001@gmail.com
+    test-say-hello:
+        runs-on: ubuntu-latest
+        step:
+            - run: echo Hello would
