@@ -1,0 +1,9 @@
+GET http://localhost:8888/todos
+
+###
+POST http://localhost:8888
+Content-Type: application/json
+
+{
+    "x": "y"
+}
