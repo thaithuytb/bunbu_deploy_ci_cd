@@ -13,15 +13,16 @@ jobs:
 
     steps:
       - run: echo Hello
-  run-test:
-    runs-on: ubuntu-latest
+  run-tests:
+    runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v3
-      - run: npm install
+      - uses: actions/checkout@v2
+      - run: yarn install
       - uses: ArtiomTr/jest-coverage-report-action@v2
         with:
           threshold: 40
   deploy-to-heroku:
+    needs: [test-say-hello, run-tests]
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
