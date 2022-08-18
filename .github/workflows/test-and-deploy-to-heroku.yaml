@@ -1,0 +1,28 @@
+name: Deploy nodejs app to heroku
+
+on:
+  push:
+    branches: ['master']
+  pull_request:
+    branches: ['master']
+  workflow_dispatch:
+
+jobs:
+  test-say-hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo Hello
+  run-test-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: npm install
+      - uses: ArtiomTr/jest-coverage-report-action@v2
+        with:
+         threshold: 40
+      - uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+         heroku_app_name: 'github-action-auto-deploy'
+         heroku_email: 'ngoquangthai29112001@gmail.com'
