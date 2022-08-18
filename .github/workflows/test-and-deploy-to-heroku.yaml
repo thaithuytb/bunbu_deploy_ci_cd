@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - run: echo Hello
-  run-test-and-deploy:
+  run-tests:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v2
@@ -21,6 +21,11 @@ jobs:
       - uses: ArtiomTr/jest-coverage-report-action@v2
         with:
          threshold: 40
+  deploy-to-heroku:
+    needs: [test-say-hello, run-tests]
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
