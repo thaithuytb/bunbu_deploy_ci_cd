@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "main": "server.ts",
   "license": "MIT",
+  "engines": {
+    "node": "16.x",
+    "yarn": "1.x"
+  },
   "scripts": {
     "dev": "nodemon src/server.ts",
     "build": "tsc -p .",
