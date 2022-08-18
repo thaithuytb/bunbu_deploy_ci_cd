@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "nodemon src/server.ts",
     "build": "tsc -p .",
-    "start": "node dist/src/index.js",
+    "start": "node dist/src/server.js",
     "test": "jest --watchAll",
     "lint": "eslint . --ext .ts",
     "lint-and-fix": "eslint . --ext .ts --fix"
