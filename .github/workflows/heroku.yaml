@@ -1,10 +1,10 @@
 name: Deploy nodejs app to heroku
 
 on:
-    push:
-        branches: ['master']
-    pull_request:
-        branches: ['master']
+  push:
+      branches: ['master']
+  pull_request:
+      branches: ['master']
 jobs:
     # build:
     #   runs-on: ubuntu-latest
@@ -31,7 +31,7 @@ jobs:
     #         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
     #         heroku_app_name: github-action-auto-deploy
     #         heroku_email: ngoquangthai29112001@gmail.com
-    test-say-hello:
-        runs-on: ubuntu-latest
-        step:
-            - run: echo Hello would
+  test-say-hello:
+    runs-on: ubuntu-latest
+      step:
+        - run: echo Hello would
