@@ -20,14 +20,12 @@ jobs:
         - run: npm install
         - uses: ArtiomTr/jest-coverage-report-action@v2
           with:
-            github-token: ${{ secrets.SECRET_TOKEN }}
             threshold: 40
-            skip-step: install
   deploy-to-heroku:
       runs-on: ubuntu-22.04
       steps:
         - uses: CDNievas/heroku-action@v1.0
           with:
             heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-            heroku_app_name: github-action-auto-deploy
-            heroku_email: ngoquangthai29112001@gmail.com
+            heroku_app_name: "github-action-auto-deploy"
+            heroku_email: "ngoquangthai29112001@gmail.com"
