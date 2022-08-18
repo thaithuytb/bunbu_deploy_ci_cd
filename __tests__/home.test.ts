@@ -10,7 +10,9 @@ describe('First test', () => {
         const res = await request(server).get('/');
 
         expect(res.status).toEqual(200);
-        expect(res.body).toEqual('Hello would !!!');
+        expect(res.body).toEqual(
+            'Hello would !!! -- aftertest deploy github action !'
+        );
     });
 
     afterEach(() => {
