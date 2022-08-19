@@ -22,7 +22,7 @@ jobs:
         with:
           threshold: 40
   deploy-to-heroku:
-    needs: [test-say-hello]
+    needs: [test-say-hello, run-tests]
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
