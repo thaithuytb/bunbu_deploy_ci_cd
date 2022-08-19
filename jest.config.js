@@ -8,3 +8,6 @@ module.exports = {
   testEnvironment: "node",
   coverageReporters: ["json", "lcov", "text", "clover"], // "text-summary"
 };
+
+// jest.setup.js
+

@@ -22,7 +22,7 @@ app.use(
 );
 app.use(express.json());
 app.use(express.static(path.join(__dirname + '/publics')));
-app.get('/todos', TodoController.getTodos);
+app.get('/todo', TodoController.getAll);
 app.get('/', helloWould);
 
 export default app;
