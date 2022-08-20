@@ -1,31 +1,17 @@
-import app from '../src/app';
+import makeApp from '../src/app';
 import request from 'supertest';
-// import connectDB from '../src/database/connect/index';
-// import { query } from 'express';
 
-// import Todo from '../src/interfaces/todo.interface';
-// import TodoController from '../src/controllers/todo.controller';
+const mockDatabase = jest.mock('../src/database/connect/index.ts', () => ({
+  connect: jest.fn(),
+}));
 
-describe('test get todo route', () => {
-  afterAll(() => {
-    jest.resetAllMocks();
-  });
+makeApp(mockDatabase);
+describe('test todo route', () => {
+  describe('GET /todo', () => {
+    test('Return 200 status code and a list todo', async () => {
+      const res = await request(makeApp).get('/todo');
 
-  test('GET /todo -> code 200 and a list todo', async () => {
-    const res = await request(app).get('/todo');
-    expect(res.status).toEqual(200);
-  });
-
-  test('GET /todo -> code 500 and error', async () => {
-    const mockError = () => {
-      return jest.fn(() => ({
-        success: false,
-        message: expect.stringContaining('error'),
-        error: expect.any,
-      }));
-    };
-    const res = await await request(app).get('/todo');
-
-    expect(res.error).toMatchObject(mockError);
+      expect(res.statusCode).toEqual(200);
+    });
   });
 });

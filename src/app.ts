@@ -2,27 +2,31 @@ import dotenv from 'dotenv';
 import express from 'express';
 import cors from 'cors';
 import path from 'path';
+import { Pool } from 'mysql';
 
 import helloWould from './controllers/helloWould';
-import TodoController from './controllers/todo.controller';
-import connectDB from './database/connect/index';
+import todoController from './controllers/todo.controller';
 
 dotenv.config();
-const app = express();
 
-connectDB.connect((err) => {
-  if (err) throw err;
-  console.log('Database is connected !!!');
-});
-app.use(
-  cors({
-    origin: 'http://localhost:3000',
-    credentials: true,
-  })
-);
-app.use(express.json());
-app.use(express.static(path.join(__dirname + '/publics')));
-app.get('/todo', TodoController.getAll);
-app.get('/', helloWould);
+export default function (database: Pool) {
+  const app = express();
 
-export default app;
+  app.use(
+    cors({
+      origin: 'http://localhost:3000',
+      credentials: true,
+    })
+  );
+
+  app.use(express.json());
+  app.use(express.static(path.join(__dirname + '/publics')));
+  //todo
+  app.get('/todo', todoController(database).getAllTodo);
+  // app.post('/todo', todoController(database).postTodo);
+  // app.put('/todo/:id', todoController(database).putTodo);
+  // app.delete('/todo/:id', todoController(database).deleteTodo);
+  app.get('/todo/:id', todoController(database).getOneTodo);
+  app.get('/', helloWould);
+  return app;
+}

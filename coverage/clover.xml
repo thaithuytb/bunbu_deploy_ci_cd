@@ -1,60 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1660923083062" clover="3.2.0">
-  <project timestamp="1660923083062" name="All files">
-    <metrics statements="33" coveredstatements="30" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="4" elements="39" coveredelements="34" complexity="0" loc="33" ncloc="33" packages="3" files="4" classes="4"/>
-    <package name="src">
-      <metrics statements="18" coveredstatements="18" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="app.ts" path="/home/aichi/nodejs/express/src/app.ts">
-        <metrics statements="18" coveredstatements="18" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="7" count="2" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
-        <line num="10" count="2" type="stmt"/>
-        <line num="11" count="2" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
-        <line num="14" count="1" type="cond" truecount="0" falsecount="1"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="17" count="2" type="stmt"/>
-        <line num="23" count="2" type="stmt"/>
-        <line num="24" count="2" type="stmt"/>
-        <line num="25" count="2" type="stmt"/>
-        <line num="26" count="2" type="stmt"/>
-        <line num="28" count="2" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.controllers">
-      <metrics statements="12" coveredstatements="9" conditionals="1" coveredconditionals="0" methods="3" coveredmethods="3"/>
-      <file name="helloWould.ts" path="/home/aichi/nodejs/express/src/controllers/helloWould.ts">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
-      </file>
-      <file name="todo.controller.ts" path="/home/aichi/nodejs/express/src/controllers/todo.controller.ts">
-        <metrics statements="8" coveredstatements="5" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="9" count="2" type="stmt"/>
-        <line num="10" count="2" type="cond" truecount="0" falsecount="1"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="15" count="2" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.database.connect">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="index.ts" path="/home/aichi/nodejs/express/src/database/connect/index.ts">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="12" count="2" type="stmt"/>
-      </file>
-    </package>
+<coverage generated="1660977080356" clover="3.2.0">
+  <project timestamp="1660977080357" name="All files">
+    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0"/>
   </project>
 </coverage>

@@ -1,19 +1,48 @@
 import { Request, Response } from 'express';
-import { MysqlError } from 'mysql';
-import connectDB from '../database/connect/index';
+import { MysqlError, Pool } from 'mysql';
 import Todo from '../interfaces/todo.interface';
+import todoService from '../services/todo.repository';
 
-export default class TodoController {
-  //GET /todo
-  static getAll(req: Request, res: Response) {
-    connectDB.query('SELECT * FROM todos', (err: MysqlError, rows: Todo[]) => {
+const todoController = (db: Pool) => ({
+  //GET - todo
+  getAllTodo: async (req: Request, res: Response) => {
+    await todoService(db, (err: MysqlError, data: Todo[]) => {
       if (err) {
-        res.status(500);
-        res.json({ success: false, message: 'query error', error: err });
-        throw err;
+        res.status(500).json({
+          success: false,
+          message: 'error',
+          err,
+        });
+      } else {
+        res.status(200);
+        res.json({
+          success: true,
+          data,
+        });
       }
-      return res.status(200).json([...rows]);
-    });
-  }
-  // POST /todo
-}
+    }).getAll();
+  },
+  // POST - todo
+  // postTodo: async (req: Request, res: Response) => {},
+  // putTodo: async (req: Request, res: Response) => {},
+  // deleteTodo: async (req: Request, res: Response) => {},
+  getOneTodo: async (req: Request, res: Response) => {
+    await todoService(db, (err: MysqlError, data: Todo) => {
+      if (err) {
+        res.status(500).json({
+          success: false,
+          message: 'error',
+          err,
+        });
+      } else {
+        res.status(200);
+        res.json({
+          success: true,
+          data,
+        });
+      }
+    }).getOne(req.params.id);
+  },
+});
+
+export default todoController;
