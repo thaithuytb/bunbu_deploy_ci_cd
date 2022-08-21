@@ -6,42 +6,48 @@ import todoService from '../services/todo.repository';
 const todoController = (db: Pool) => ({
   //GET - todo
   getAllTodo: async (req: Request, res: Response) => {
-    await todoService(db, (err: MysqlError, data: Todo[]) => {
-      if (err) {
-        res.status(500).json({
+    try {
+      await todoService(db, (err: MysqlError, data: Todo[]) => {
+        if (!err) {
+          return res.status(200).json({
+            success: true,
+            data,
+          });
+        }
+        return res.status(500).json({
           success: false,
-          message: 'error',
-          err,
+          message: 'Query error',
+          error: err,
         });
-      } else {
-        res.status(200);
-        res.json({
-          success: true,
-          data,
-        });
-      }
-    }).getAll();
+      }).getAll();
+    } catch (error) {}
   },
   // POST - todo
   // postTodo: async (req: Request, res: Response) => {},
   // putTodo: async (req: Request, res: Response) => {},
   // deleteTodo: async (req: Request, res: Response) => {},
   getOneTodo: async (req: Request, res: Response) => {
-    await todoService(db, (err: MysqlError, data: Todo) => {
-      if (err) {
-        res.status(500).json({
+    try {
+      await todoService(db, (err: MysqlError, data: Todo) => {
+        if (!err) {
+          if (!data) {
+            return res.status(404).json({
+              success: false,
+              message: 'Not found',
+            });
+          }
+          return res.status(200).json({
+            success: true,
+            data: data,
+          });
+        }
+        return res.status(500).json({
           success: false,
-          message: 'error',
+          message: 'Query error',
           err,
         });
-      } else {
-        res.status(200);
-        res.json({
-          success: true,
-          data,
-        });
-      }
-    }).getOne(req.params.id);
+      }).getOne(req.params.id);
+    } catch (error) {}
   },
 });
 

@@ -9,7 +9,7 @@ import todoController from './controllers/todo.controller';
 
 dotenv.config();
 
-export default function (database: Pool) {
+export default function (database: Pool | any) {
   const app = express();
 
   app.use(

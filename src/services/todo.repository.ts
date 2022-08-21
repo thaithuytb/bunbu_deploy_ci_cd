@@ -17,7 +17,7 @@ const todoService = (database: Pool, cb: any) => {
           if (err) {
             cb(err, null);
           }
-          cb(null, result);
+          cb(null, result[0]);
         }
       );
     },

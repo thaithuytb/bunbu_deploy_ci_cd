@@ -7,6 +7,10 @@ module.exports = {
   collectCoverage: true,
   testEnvironment: "node",
   coverageReporters: ["json", "lcov", "text", "clover"], // "text-summary"
+  fakeTimers: {
+    enableGlobally: true,
+    legacyFakeTimers: true
+  }
 };
 
 // jest.setup.js
