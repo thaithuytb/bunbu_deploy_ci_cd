@@ -1,0 +1,11 @@
+
+{
+    "dev": {
+        "host": "btlfgd71ynsj9onwruxf-mysql.services.clever-cloud.com",
+        "user": "uzwxvd90orwjy3fx",
+        "password" : "zuYAfNhCObtLYhVv6LPp",
+        "database": "btlfgd71ynsj9onwruxf",
+        "driver": "mysql",
+        "multipleStatements": true
+    }
+}

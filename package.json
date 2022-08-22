@@ -13,10 +13,14 @@
     "start": "node dist/src/server.js",
     "test": "jest --watchAll",
     "lint": "eslint . --ext .ts",
-    "lint-and-fix": "eslint . --ext .ts --fix"
+    "lint-and-fix": "eslint . --ext .ts --fix",
+    "migration:up": "db-migrate up",
+    "migration:reset-up":"db-migrate reset && db-migrate up"
   },
   "dependencies": {
     "cors": "^2.8.5",
+    "db-migrate": "^0.11.13",
+    "db-migrate-mysql": "^2.2.0",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "mysql": "^2.18.1",
@@ -35,6 +39,7 @@
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.33.1",
     "concurrently": "^7.3.0",
+    "db-migrate-plugin-typescript": "^2.0.0",
     "eslint": "^8.0.1",
     "eslint-config-standard-with-typescript": "^22.0.0",
     "eslint-plugin-import": "^2.25.2",

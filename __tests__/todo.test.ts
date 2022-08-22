@@ -1,7 +1,6 @@
 import makeApp from '../src/app';
 import request from 'supertest';
 import { jest } from '@jest/globals';
-import { application } from 'express';
 
 describe('test todo route', () => {
   /**
