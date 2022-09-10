@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1661240552084" clover="3.2.0">
-  <project timestamp="1661240552084" name="All files">
-    <metrics statements="80" coveredstatements="59" conditionals="6" coveredconditionals="5" methods="23" coveredmethods="17" elements="109" coveredelements="81" complexity="0" loc="80" ncloc="80" packages="3" files="6" classes="6"/>
+<coverage generated="1661833501853" clover="3.2.0">
+  <project timestamp="1661833501853" name="All files">
+    <metrics statements="93" coveredstatements="63" conditionals="6" coveredconditionals="5" methods="28" coveredmethods="18" elements="127" coveredelements="86" complexity="0" loc="93" ncloc="93" packages="3" files="6" classes="6"/>
     <package name="src">
-      <metrics statements="18" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="19" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="app.ts" path="/home/aichi/nodejs/express/src/app.ts">
-        <metrics statements="18" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <metrics statements="19" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
         <line num="3" count="2" type="stmt"/>
@@ -13,21 +13,22 @@
         <line num="7" count="2" type="stmt"/>
         <line num="8" count="2" type="stmt"/>
         <line num="9" count="2" type="stmt"/>
-        <line num="11" count="2" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
-        <line num="14" count="6" type="stmt"/>
-        <line num="16" count="6" type="stmt"/>
-        <line num="23" count="6" type="stmt"/>
-        <line num="24" count="6" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="6" type="stmt"/>
+        <line num="19" count="6" type="stmt"/>
         <line num="26" count="6" type="stmt"/>
+        <line num="27" count="6" type="stmt"/>
+        <line num="29" count="6" type="stmt"/>
         <line num="30" count="6" type="stmt"/>
-        <line num="31" count="6" type="stmt"/>
         <line num="32" count="6" type="stmt"/>
-        <line num="33" count="6" type="stmt"/>
+        <line num="34" count="6" type="stmt"/>
+        <line num="35" count="6" type="stmt"/>
+        <line num="36" count="6" type="stmt"/>
       </file>
     </package>
     <package name="src.controllers">
-      <metrics statements="33" coveredstatements="24" conditionals="4" coveredconditionals="3" methods="11" coveredmethods="9"/>
+      <metrics statements="38" coveredstatements="26" conditionals="4" coveredconditionals="3" methods="14" coveredmethods="10"/>
       <file name="helloWould.ts" path="/home/aichi/nodejs/express/src/controllers/helloWould.ts">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="2" type="stmt"/>
@@ -36,19 +37,24 @@
         <line num="8" count="2" type="stmt"/>
       </file>
       <file name="oAuth2.controller.ts" path="/home/aichi/nodejs/express/src/controllers/oAuth2.controller.ts">
-        <metrics statements="12" coveredstatements="3" conditionals="1" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <metrics statements="17" coveredstatements="5" conditionals="1" coveredconditionals="0" methods="6" coveredmethods="2"/>
         <line num="3" count="2" type="stmt"/>
-        <line num="8" count="6" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
-        <line num="17" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="38" count="2" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="40" count="2" type="stmt"/>
+        <line num="41" count="6" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
       </file>
       <file name="todo.controller.ts" path="/home/aichi/nodejs/express/src/controllers/todo.controller.ts">
         <metrics statements="17" coveredstatements="17" conditionals="3" coveredconditionals="3" methods="7" coveredmethods="7"/>
@@ -72,9 +78,9 @@
       </file>
     </package>
     <package name="src.services">
-      <metrics statements="29" coveredstatements="17" conditionals="2" coveredconditionals="2" methods="11" coveredmethods="7"/>
+      <metrics statements="36" coveredstatements="18" conditionals="2" coveredconditionals="2" methods="13" coveredmethods="7"/>
       <file name="oAuth2.service.ts" path="/home/aichi/nodejs/express/src/services/oAuth2.service.ts">
-        <metrics statements="16" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <metrics statements="23" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
         <line num="20" count="2" type="stmt"/>
@@ -91,6 +97,13 @@
         <line num="54" count="0" type="stmt"/>
         <line num="62" count="0" type="stmt"/>
         <line num="64" count="0" type="stmt"/>
+        <line num="68" count="2" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="76" count="0" type="stmt"/>
+        <line num="78" count="0" type="stmt"/>
       </file>
       <file name="todo.repository.ts" path="/home/aichi/nodejs/express/src/services/todo.repository.ts">
         <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="7"/>
